@@ -18,6 +18,7 @@
         <div>
             
             <!-- Button trigger modal -->
+<<<<<<< HEAD
             @auth
                 <button type="button" class="btn btn-link text-danger btn-sm p-0" data-toggle="modal" data-target="#exampleModal">
                     Delete
@@ -56,6 +57,42 @@
             
 
             
+=======
+            <button type="button" class="btn btn-link text-danger btn-sm p-0" data-toggle="modal" data-target="#exampleModal">
+            Delete
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Are you sure for delete ?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>{{$post->title}}</div>
+                    <div>
+                        Publish on : {{$post->created_at->format('d F, Y')}}
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    
+                    <button type="button" class=" btn btn-primary btn-sm" data-dismiss="modal">Close</button>
+                    <form action="/post/{{$post->id}}" method="POST" class="p-0 m-0">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger btn-sm">
+                            Delete
+                        </button>
+                    </form>
+                </div>
+                </div>
+            </div>
+            </div>
+>>>>>>> f7f695b02b2db0f91b8878bd2a403a65996e4296
         </div>
     </div>
 @endsection

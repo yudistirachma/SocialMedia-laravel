@@ -1,0 +1,9 @@
+#blade luar biasa ya
+@include('nama.file')
+
+@extend('nama.file')
+
+@section('content')
+@endsection
+@yield('content')
+

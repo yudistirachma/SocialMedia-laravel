@@ -14,15 +14,11 @@
             <hr>
         </div>
         <div>
-<<<<<<< HEAD
             @if (Auth::check())
                 <a href="{{route('posts.create')}}" class="btn btn-primary">New Post</a>
             @else
                 <a href="{{route('posts.create')}}" class="btn btn-primary">login for create post</a>
             @endif
-=======
-            <a href="/post/create" class="btn btn-primary">New Post</a>
->>>>>>> f7f695b02b2db0f91b8878bd2a403a65996e4296
         </div>
     </div>
     <div class="row">
@@ -40,13 +36,9 @@
                     </div>
                     <div class="card-footer d-flex justify-content-between">
                         Publish on : {{$post->created_at->diffForHumans()}}
-<<<<<<< HEAD
                         @auth
                             <a href="/post/{{$post->id}}/edit" class="btn btn-sm btn-success">Edit</a>
                         @endauth
-=======
-                        <a href="/post/{{$post->id}}/edit" class="btn btn-sm btn-success">Edit</a>
->>>>>>> f7f695b02b2db0f91b8878bd2a403a65996e4296
                     </div>
                 </div>
             </div>

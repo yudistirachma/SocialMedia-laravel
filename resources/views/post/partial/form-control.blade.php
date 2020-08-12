@@ -23,11 +23,7 @@
 </div>
 <div class="form-group">
     <label for="tags">Tag</label>
-<<<<<<< HEAD
     <select type="text" name="tags[]" id="tags" class="form-control select2 @error('tags') is-invalid @enderror " multiple>
-=======
-    <select type="text" name="tags[]" id="tags" class="form-control @error('tags') is-invalid @enderror select2" multiple>
->>>>>>> f7f695b02b2db0f91b8878bd2a403a65996e4296
         @foreach ($tags as $tag)
         @if (isset($cek))
             <option {{in_array($tag->id, $cek) ? 'selected' : '' }} value="{{$tag->id}}">{{$tag->name}}</option>

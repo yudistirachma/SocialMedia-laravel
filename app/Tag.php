@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tag extends Model
 {
+    protected $fillable = ['name', 'slug'];
     // relasi many to many
     public function posts()
     {

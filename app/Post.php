@@ -14,7 +14,7 @@ class Post extends Model
     {
         return 'slug';
     }
-    // relasi one to many
+    // relasi many to one
     public function category()
     {
         return $this->belongsTo(Category::class, 'category_id');
@@ -23,5 +23,9 @@ class Post extends Model
     public function tags()
     {
         return $this->belongsToMany(Tag::class, 'post_tag');
+    }
+
+    public function user(){
+       return $this->belongsTo(User::class, 'user_id');
     }
 }

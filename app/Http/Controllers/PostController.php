@@ -3,14 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PostRequest;
-use App\{Post, Tag, Category};
+use App\{Post, Tag, Category, User};
 use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
     public function show(Post $post)
     {
-        // dd($post->tags);
         return view('post.show', compact('post'));
     }
     public function index()
@@ -27,17 +26,21 @@ class PostController extends Controller
         ]);
     }
     public function store(PostRequest $request)
-    {
+    {   
         // $attr = request()->validate([
         //     'title' => 'required|min:3|max:50|unique:posts',
         //     'body' => 'required|min:3'
         // ]);
 
         $attr  = $request->all();
-        $attr["slug"] = Str::slug($request->title);
-        $attr["category_id"] = $request->category;
 
-        $post = Post::create($attr);
+        $attr["slug"] = Str::slug($request->title);
+        $attr["category_id"] = request('category');
+
+        // create a new post
+        // $post = Post::create($attr);
+        $post = auth()->user()->posts()->create($attr);
+        
         $post->tags()->attach($request->tags);
 
         session()->flash('success', 'The content was created');
@@ -46,7 +49,13 @@ class PostController extends Controller
     }
     public function edit(Post $post)
     {
-        foreach ($post->tags as $tag) {
+        if (auth()->id() != $post->user_id) 
+        {
+            return back();
+        }
+
+        foreach ($post->tags as $tag) 
+        {
             $cek[] = $tag->id;
         }
 
@@ -90,7 +99,12 @@ class PostController extends Controller
     }
     public function destroy(Post $post)
     {
-        // dd($post);
+        // cek auth user yang login
+        if (auth()->user()->is($post->user) == false) {
+            session()->flash('error', 'That is not your post');
+            return redirect('/post');
+        }
+        
         $post->tags()->detach();
         $post->delete();
 

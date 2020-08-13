@@ -36,9 +36,9 @@
                     </div>
                     <div class="card-footer d-flex justify-content-between">
                         Publish on : {{$post->created_at->diffForHumans()}}
-                        @auth
+                        @if (auth()->id() == $post->user_id)
                             <a href="/post/{{$post->id}}/edit" class="btn btn-sm btn-success">Edit</a>
-                        @endauth
+                        @endif
                     </div>
                 </div>
             </div>

@@ -69,12 +69,9 @@ class PostController extends Controller
     }
     public function update(Post $post)
     {
-<<<<<<< HEAD
         // authorize
         $this->authorize('update', $post);
 
-=======
->>>>>>> f46b3bf6b1ed28d4480a72810b912d911b98d350
         if ($post->title == request()->title) {
             $attr = request()->validate([
                 'title' => 'required|min:3|max:50',
@@ -102,19 +99,11 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         // cek auth user yang login
-<<<<<<< HEAD
         if (auth()->id() != $post->user_id) {
             session()->flash('error', 'That is not your post');
             return redirect('/post');
         }
 
-=======
-        if (auth()->user()->is($post->user) == false) {
-            session()->flash('error', 'That is not your post');
-            return redirect('/post');
-        }
-        
->>>>>>> f46b3bf6b1ed28d4480a72810b912d911b98d350
         $post->tags()->detach();
         $post->delete();
 

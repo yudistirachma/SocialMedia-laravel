@@ -13,11 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-<<<<<<< HEAD
         'App\Post' => 'App\Policies\PostPolicy',
-=======
-        // 'App\Model' => 'App\Policies\ModelPolicy',
->>>>>>> f46b3bf6b1ed28d4480a72810b912d911b98d350
     ];
 
     /**
@@ -29,12 +25,8 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-<<<<<<< HEAD
         Gate::before(function ($user) {
             return $user->isAdmin() ? true : null;
         });
-=======
-        //
->>>>>>> f46b3bf6b1ed28d4480a72810b912d911b98d350
     }
 }

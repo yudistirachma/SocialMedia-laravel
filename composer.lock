@@ -898,6 +898,7 @@
         },
         {
             "name": "laravel/tinker",
+<<<<<<< HEAD
             "version": "v2.4.2",
             "source": {
                 "type": "git",
@@ -908,6 +909,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/tinker/zipball/58424c24e8aec31c3a3ac54eb3adb15e8a0a067b",
                 "reference": "58424c24e8aec31c3a3ac54eb3adb15e8a0a067b",
+=======
+            "version": "v2.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/tinker.git",
+                "reference": "3c9ef136ca59366bc1b50b7f2500a946d5149c62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/tinker/zipball/3c9ef136ca59366bc1b50b7f2500a946d5149c62",
+                "reference": "3c9ef136ca59366bc1b50b7f2500a946d5149c62",
+>>>>>>> f46b3bf6b1ed28d4480a72810b912d911b98d350
                 "shasum": ""
             },
             "require": {
@@ -958,7 +971,11 @@
                 "laravel",
                 "psysh"
             ],
+<<<<<<< HEAD
             "time": "2020-08-11T19:28:08+00:00"
+=======
+            "time": "2020-07-07T15:10:00+00:00"
+>>>>>>> f46b3bf6b1ed28d4480a72810b912d911b98d350
         },
         {
             "name": "league/commonmark",
@@ -1057,6 +1074,7 @@
         },
         {
             "name": "league/flysystem",
+<<<<<<< HEAD
             "version": "1.1.1",
             "source": {
                 "type": "git",
@@ -1067,6 +1085,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/6e96f54d82e71f71c4108da33ee96a7f57083710",
                 "reference": "6e96f54d82e71f71c4108da33ee96a7f57083710",
+=======
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/flysystem.git",
+                "reference": "481c0174b9c99b189959e2bb9d6f52188ed1f692"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/481c0174b9c99b189959e2bb9d6f52188ed1f692",
+                "reference": "481c0174b9c99b189959e2bb9d6f52188ed1f692",
+>>>>>>> f46b3bf6b1ed28d4480a72810b912d911b98d350
                 "shasum": ""
             },
             "require": {
@@ -1144,7 +1174,11 @@
                     "type": "other"
                 }
             ],
+<<<<<<< HEAD
             "time": "2020-08-12T14:23:41+00:00"
+=======
+            "time": "2020-08-09T15:57:10+00:00"
+>>>>>>> f46b3bf6b1ed28d4480a72810b912d911b98d350
         },
         {
             "name": "league/mime-type-detection",
@@ -4972,6 +5006,7 @@
         },
         {
             "name": "mockery/mockery",
+<<<<<<< HEAD
             "version": "1.3.3",
             "source": {
                 "type": "git",
@@ -4982,20 +5017,46 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/mockery/mockery/zipball/60fa2f67f6e4d3634bb4a45ff3171fa52215800d",
                 "reference": "60fa2f67f6e4d3634bb4a45ff3171fa52215800d",
+=======
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mockery/mockery.git",
+                "reference": "1404386ca3410b04fe58b9517e85d702ab33b2c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/1404386ca3410b04fe58b9517e85d702ab33b2c6",
+                "reference": "1404386ca3410b04fe58b9517e85d702ab33b2c6",
+>>>>>>> f46b3bf6b1ed28d4480a72810b912d911b98d350
                 "shasum": ""
             },
             "require": {
                 "hamcrest/hamcrest-php": "^2.0.1",
                 "lib-pcre": ">=7.0",
+<<<<<<< HEAD
                 "php": ">=5.6.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.7.10|^6.5|^7.5|^8.5|^9.3"
+=======
+                "php": "^7.3 || ^8.0"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5 || ^9.0"
+>>>>>>> f46b3bf6b1ed28d4480a72810b912d911b98d350
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-master": "1.3.x-dev"
+=======
+                    "dev-master": "1.4.x-dev"
+>>>>>>> f46b3bf6b1ed28d4480a72810b912d911b98d350
                 }
             },
             "autoload": {
@@ -5033,7 +5094,11 @@
                 "test double",
                 "testing"
             ],
+<<<<<<< HEAD
             "time": "2020-08-11T18:10:21+00:00"
+=======
+            "time": "2020-07-09T08:31:54+00:00"
+>>>>>>> f46b3bf6b1ed28d4480a72810b912d911b98d350
         },
         {
             "name": "myclabs/deep-copy",
@@ -5322,6 +5387,7 @@
                 "reflection",
                 "static analysis"
             ],
+<<<<<<< HEAD
             "time": "2020-06-27T09:03:43+00:00"
         },
         {
@@ -5347,6 +5413,34 @@
             },
             "require-dev": {
                 "mockery/mockery": "~1.3.2"
+=======
+            "time": "2020-04-27T09:25:28+00:00"
+        },
+        {
+            "name": "phpdocumentor/reflection-docblock",
+            "version": "5.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
+                "reference": "cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e",
+                "reference": "cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-filter": "^7.1",
+                "php": "^7.2",
+                "phpdocumentor/reflection-common": "^2.0",
+                "phpdocumentor/type-resolver": "^1.0",
+                "webmozart/assert": "^1"
+            },
+            "require-dev": {
+                "doctrine/instantiator": "^1",
+                "mockery/mockery": "^1"
+>>>>>>> f46b3bf6b1ed28d4480a72810b912d911b98d350
             },
             "type": "library",
             "extra": {
@@ -5419,6 +5513,7 @@
                 }
             ],
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
+<<<<<<< HEAD
             "time": "2020-06-27T10:12:23+00:00"
         },
         {
@@ -5445,11 +5540,43 @@
             "require-dev": {
                 "phpspec/phpspec": "^6.0",
                 "phpunit/phpunit": "^8.0"
+=======
+            "time": "2020-06-19T20:22:09+00:00"
+        },
+        {
+            "name": "phpspec/prophecy",
+            "version": "v1.10.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpspec/prophecy.git",
+                "reference": "451c3cd1418cf640de218914901e51b064abb093"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/451c3cd1418cf640de218914901e51b064abb093",
+                "reference": "451c3cd1418cf640de218914901e51b064abb093",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/instantiator": "^1.0.2",
+                "php": "^5.3|^7.0",
+                "phpdocumentor/reflection-docblock": "^2.0|^3.0.2|^4.0|^5.0",
+                "sebastian/comparator": "^1.2.3|^2.0|^3.0|^4.0",
+                "sebastian/recursion-context": "^1.0|^2.0|^3.0|^4.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "^2.5 || ^3.2",
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.5 || ^7.1"
+>>>>>>> f46b3bf6b1ed28d4480a72810b912d911b98d350
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-master": "1.11.x-dev"
+=======
+                    "dev-master": "1.10.x-dev"
+>>>>>>> f46b3bf6b1ed28d4480a72810b912d911b98d350
                 }
             },
             "autoload": {
@@ -5482,7 +5609,11 @@
                 "spy",
                 "stub"
             ],
+<<<<<<< HEAD
             "time": "2020-07-08T12:44:21+00:00"
+=======
+            "time": "2020-03-05T15:02:03+00:00"
+>>>>>>> f46b3bf6b1ed28d4480a72810b912d911b98d350
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -5734,7 +5865,10 @@
             "keywords": [
                 "tokenizer"
             ],
+<<<<<<< HEAD
             "abandoned": true,
+=======
+>>>>>>> f46b3bf6b1ed28d4480a72810b912d911b98d350
             "time": "2019-09-17T06:23:10+00:00"
         },
         {

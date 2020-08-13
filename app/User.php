@@ -38,7 +38,14 @@ class User extends Authenticatable
     ];
 
     // relasi one to many
-    public function posts(){
+    public function posts()
+    {
         return $this->hasMany(Post::class, 'user_id');
+    }
+
+    // membuat akeses admin 
+    public function isAdmin()
+    {
+        return $this->username == "pasukanBodrek";
     }
 }

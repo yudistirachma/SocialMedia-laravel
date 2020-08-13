@@ -26,7 +26,7 @@ class PostController extends Controller
         ]);
     }
     public function store(PostRequest $request)
-    {   
+    {
         // $attr = request()->validate([
         //     'title' => 'required|min:3|max:50|unique:posts',
         //     'body' => 'required|min:3'
@@ -40,7 +40,7 @@ class PostController extends Controller
         // create a new post
         // $post = Post::create($attr);
         $post = auth()->user()->posts()->create($attr);
-        
+
         $post->tags()->attach($request->tags);
 
         session()->flash('success', 'The content was created');
@@ -49,13 +49,10 @@ class PostController extends Controller
     }
     public function edit(Post $post)
     {
-        if (auth()->id() != $post->user_id) 
-        {
-            return back();
-        }
+        // authorize
+        $this->authorize('update', $post);
 
-        foreach ($post->tags as $tag) 
-        {
+        foreach ($post->tags as $tag) {
             $cek[] = $tag->id;
         }
 
@@ -73,6 +70,9 @@ class PostController extends Controller
     }
     public function update(Post $post)
     {
+        // authorize
+        $this->authorize('update', $post);
+
         if ($post->title == request()->title) {
             $attr = request()->validate([
                 'title' => 'required|min:3|max:50',
@@ -100,11 +100,11 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         // cek auth user yang login
-        if (auth()->user()->is($post->user) == false) {
+        if (auth()->id() != $post->user_id) {
             session()->flash('error', 'That is not your post');
             return redirect('/post');
         }
-        
+
         $post->tags()->detach();
         $post->delete();
 

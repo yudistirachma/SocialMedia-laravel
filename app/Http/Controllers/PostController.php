@@ -11,11 +11,12 @@ class PostController extends Controller
 {
     public function show(Post $post)
     {
-        return view('post.show', compact('post'));
+        $posts = Post::with('tags', 'category', 'user')->where('category_id', $post->category_id)->latest()->limit(5)->get();
+        return view('post.show', compact('post', 'posts'));
     }
     public function index()
     {
-        $posts =  Post::orderBy('edited_at', 'desc')->paginate(6);
+        $posts =  Post::with('tags', 'category', 'user')->orderBy('edited_at', 'desc')->paginate(6);
         return view('post.index', compact('posts'));
     }
     public function create()

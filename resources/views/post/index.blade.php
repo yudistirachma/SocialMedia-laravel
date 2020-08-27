@@ -2,7 +2,7 @@
 @section('title', 'All Posts')
 @section('content')
 <div class="container">
-    <div class="">
+    <div class="d-flex">
         <div>
             @if (isset($category))
                 <h4>Category : {{$category->name}}</h4>
@@ -14,8 +14,10 @@
             <hr>
         </div>
     </div>
+    
     <div class="row">
-        <div class="col-md-7">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
             @forelse ($posts as $post) 
                 <div class="card mb-4">
                     {{-- <img src="{{asset("storage/". $post->thumbnail)}}" class="card-img-top" alt=""> --}}
@@ -74,6 +76,7 @@
                 </div>   
             @endforelse
         </div>
+        <div class="col-md-1"></div>
     </div>
     <div class="d-flex justify-content-center">
         {{$posts->links()}}

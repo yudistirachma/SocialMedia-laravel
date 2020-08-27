@@ -32,7 +32,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-Route::prefix('post')->middleware('auth')->group(function () { 
+Route::prefix('post')->middleware('auth')->group(function () {
     Route::get('create', 'PostController@create')->name('posts.create');
     // model binding dari router 
     Route::post('store', 'PostController@store');
@@ -40,14 +40,14 @@ Route::prefix('post')->middleware('auth')->group(function () {
     Route::patch('{post:id}/edit', 'PostController@update');
     Route::delete('{post:id}', 'PostController@destroy');
     Route::get('', 'PostController@index')->name('posts.index')->withoutMiddleware('auth');
-    Route::get('{post:slug}', 'PostController@show')->withoutMiddleware('auth');
+    Route::get('{post:slug}', 'PostController@show')->withoutMiddleware('auth')->name('post.show');
 });
 
 // category
-Route::get('category/{category:slug}', 'CategoryController@show');
+Route::get('category/{category:slug}', 'CategoryController@show')->name('categories.show');
 
 // tags`
-Route::get('tags/{tag:slug}', 'TagController@show');
+Route::get('tags/{tag:slug}', 'TagController@show')->name('tags.show');
 
 
 Route::view('contact', 'contact');

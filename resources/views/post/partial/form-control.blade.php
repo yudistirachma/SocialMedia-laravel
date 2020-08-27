@@ -1,9 +1,19 @@
 <div class="form-group">
+    {{-- <label for="thumbnail">thumbnail</label><br> --}}
+    <input type="file" name="thumbnail" id="thumbnail" class="@error('thumbnail') is-invalid @enderror">
+    @error('thumbnail')
+        <div class="invalid-feedback">
+            {{$message}}
+        </div>
+    @enderror
+  {{-- <small id="helpId" class="text-muted">Help text</small> --}}
+</div>
+<div class="form-group">
     <label for="title">Title</label>
     <input type="text" name="title" id="title" value=" {{ old('title') ?? $post->title}}" class="form-control @error('title') is-invalid @enderror">
     @error('title')
         <div class="invalid-feedback">
-        {{$message}}
+            {{$message}}
         </div>
     @enderror
 </div>

@@ -8,8 +8,10 @@
                 <h4>Category : {{$category->name}}</h4>
             @elseif (isset($tag))
                 <h4>#Tag : {{$tag->name}}</h4>
+            @elseif (isset($search))
+                <h4>Search : {{$search}}</h4>
             @else
-                 <h4>All Posts</h4>
+                <h4>All Posts</h4>
             @endif
             <hr>
         </div>

@@ -32,7 +32,7 @@
                 </p>
                 <div>
                     <!-- Button trigger modal -->
-                    @if (auth()->user()->is($post->user))
+                    @if (auth()->user() == $post->user)
                         <div class="flex mt-3">
                             <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal">
                                 Delete

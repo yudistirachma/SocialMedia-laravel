@@ -43,6 +43,9 @@ Route::prefix('post')->middleware('auth')->group(function () {
     Route::get('{post:slug}', 'PostController@show')->withoutMiddleware('auth')->name('post.show');
 });
 
+// search
+Route::get('search', 'SearchController@post')->name('search.posts');
+
 // category
 Route::get('category/{category:slug}', 'CategoryController@show')->name('categories.show');
 
